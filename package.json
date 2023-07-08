@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "prettier": "prettier --write 'src/**/*.sol' 'test/**/*.sol'",
+    "solhint": "solhint --config ./.solhint.json 'src/**/*.sol' --fix",
+    "lint": "npm run prettier && npm run solhint",
+    "deploy:goerli": "forge script script/Deploy.s.sol:Deploy --rpc-url $GOERLI_RPC_URL --private-key $DEPLOYER_PRIVATE_KEY --verify --etherscan-api-key $ETHERSCAN_API_KEY --broadcast",
+    "deploy:sepolia": "forge script script/Deploy.s.sol:Deploy --rpc-url $SEPOLIA_RPC_URL --private-key $DEPLOYER_PRIVATE_KEY",
+    "deploy:mainnet": "forge script script/Deploy.s.sol:Deploy --rpc-url $MAINNET_RPC_URL --private-key $DEPLOYER_PRIVATE_KEY"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.2",
+    "prettier": "^2.5.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.6"
+  }
+}

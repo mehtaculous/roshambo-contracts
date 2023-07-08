@@ -1,0 +1,16 @@
+# Compiler
+cache/
+out/
+
+# Node
+node_modules/
+
+# Forge
+broadcast/
+
+# Environment
+.env
+.envrc
+
+# VS Code
+.vscode
